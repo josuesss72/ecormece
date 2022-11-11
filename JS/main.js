@@ -12,7 +12,8 @@ window.addEventListener('load', function() {
 	const loader = document.querySelector('.loader')
 	setTimeout(() => {
 		loader.style = 'display: none;'
-	}, 3000)	
+	}, 3000)
+
 	const objProducts = [
 		{name: 'Hoodies', id: 1, img: 'img/featured1.png', alt: 'featured1', precio: 14.00, stock: 10},
 		{name: 'Shirts', id: 2, img: 'img/featured2.png', alt: 'featured2', precio: 24.00, stock: 15},
@@ -32,6 +33,7 @@ window.addEventListener('load', function() {
 	const bxX_ShoppingCart = document.getElementById('cart-close')
 	const icon_bag = document.getElementById('icon_car')
 	const cart = document.querySelector('.cart')
+	// const count2 = document.querySelector('.acount2')
 	
 	
 
@@ -66,6 +68,7 @@ window.addEventListener('load', function() {
 	}).filter('all')
 	// navegationProducts(navShirt, commodity, gridProducts, containerSweatshirt)
 
+
 	gridProducts.addEventListener('click', (e) => {
 
 		
@@ -78,6 +81,7 @@ window.addEventListener('load', function() {
 
 			print(productsBag, bag)
 			cartCount.textContent = `${count}`
+			
 
 		}
 		
@@ -89,13 +93,15 @@ window.addEventListener('load', function() {
 
 			const productID = Number(e.target.id)
 
-			productsBag[productID].amount === 1 
-			? (delete productsBag[productID] , count = 0)
-			: (
+			productsBag[productID].amount >= 1 
+			? (
 				productsBag[productID].amount-- , 
-				count-- , 
+				count--,
 				productsBag[productID].subtotal-= productsBag[productID].precio
 			)
+			: (delete productsBag[productID] )
+
+			
 
 			cartCount.textContent = `${count}`
 
@@ -107,9 +113,14 @@ window.addEventListener('load', function() {
 
 			const productID = Number(e.target.id)
 
-			productsBag[productID].amount < productsBag[productID].stock
-			? (productsBag[productID].amount++ , count++ , productsBag[productID].subtotal+= productsBag[productID].precio)
-			: cartCount.textContent = `${count}`
+			if(productsBag[productID].amount < productsBag[productID].stock){
+				productsBag[productID].amount++
+				count++
+				productsBag[productID].subtotal+= productsBag[productID].precio
+			}
+			
+			cartCount.textContent = `${count}`
+			
 		}
 		if(e.target.classList.contains('delete')){
 
