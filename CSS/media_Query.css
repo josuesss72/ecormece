@@ -1,0 +1,696 @@
+
+
+/*=============MEDIA QUERYS=============*/
+
+
+@media (min-width: 570px){
+
+	/*.grid_main {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 1.5fr 1.5fr 1fr 0.1fr;
+		grid-template-areas: 	'home'
+								'Sweatshirt'
+								'footer'
+								'gitHub';
+		width: 100%;
+		height: 100%;
+	}*/
+
+	.colorRed {
+		
+		width: 60%;
+		height: 50%;
+
+		align-items: center;
+
+	}
+	.img_page {
+		width: 350px;
+		height: 350px;
+
+		margin-bottom: 2rem;
+	}
+	.bx {
+		font-size: 20px;
+	}
+	.bx-x {
+		font-size: 36px;
+	}
+	.grid_products {
+
+		
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+
+		width: 400px;
+
+		gap: 2rem;
+
+		margin: 0 auto;
+		margin-top: 4rem;
+	}
+
+
+	.navGrid_Sweatshirt {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		width: 100%;
+		max-width: 500px;
+		height: 100px;
+
+		margin: 0 auto;
+
+	}
+
+}
+
+@media (min-width: 700px){
+
+	body {
+		height: 2300px;
+	}
+
+	.grid_main {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 900px 900px 400px 100px;
+		grid-template-areas: 	'home'
+								'Sweatshirt'
+								'footer'
+								'gitHub';
+		width: 100%;
+		height: 100%;
+
+	}
+
+	.home_grid {
+		
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		width: 100%;
+		max-width: 1024px;
+		height: 100%;
+		background-color: transparent;
+		z-index: 200;
+
+	}
+
+	.title {
+		grid-row: 2/3;
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+	}
+
+	.colorRed {
+		
+		width: 60%;
+		height: 60%;
+
+		align-items: center;
+
+	}
+
+	.grid_Sweatshirt {
+
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+
+		height: 100%;
+		width: 100%;
+
+		position: relative;
+	}
+
+
+	.title h2 {
+		
+		font-size: 2.5rem;
+		margin-top: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.box_paragraph p:first-child {
+		font-size: 1rem;
+	}
+
+	.box_paragraph p:last-child{
+		
+		font-size: 1.50rem;
+
+		color: var(--first-color);
+	}
+
+	.bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 5rem;
+		padding: 0 1.5rem;
+	}
+
+	.box_check {
+		margin-top: 5rem;
+	}
+
+	.nav_menu {
+		position: fixed;
+		z-index: 900;
+		top: 0;
+		left: 10rem;
+		right: 0;
+
+		display: flex;
+		justify-content: center;
+
+		width: 150px;
+		height: 5rem;
+		background-color: transparent;
+
+		transform: translateX(0);
+		transition: none;
+	}
+
+	.aItem {
+		text-transform: capitalize;
+		font-weight: 500;
+	}
+	
+	.menu {
+		margin-top: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1.5rem;
+		font-size: 0.9rem;
+	}
+
+	.btns_icons {
+
+		width: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 1rem;
+
+		position: relative;
+
+	}
+
+	.cart__close {
+		display: none;
+	}
+	.bx_menu {
+		display: none;
+	}
+	#icon_car {
+		position: static;
+	}
+	.count {
+		background-color: black;
+		color: white;
+		font-size: var(--smaller-font-size);
+
+		width: 0.95rem;
+		height: 0.95rem;
+		border-radius: 50%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		cursor: pointer;
+		position: absolute;
+		top: 8px;
+		right: 0.4rem;
+	}
+
+	.cart {
+
+		width: 50%;
+
+		align-items: center;
+		justify-content: flex-start;
+
+	}
+
+	.position_x {
+		top: 1rem;
+	}
+
+	.cart h2 {
+
+		top: 5rem;
+	}
+
+	.styleBag {
+
+		height: 60%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
+	.box_empty {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+
+		margin-bottom: 0;
+
+		position: absolute;
+
+		top: 9rem;
+
+	}
+
+	.bill {
+		
+		bottom: 0;
+		top: 40rem;
+
+	}
+
+	.footer_grid {
+		
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 60px 0.5fr 0.4fr 0.4fr;
+		gap: 2rem;
+		height: 100%;
+
+		border-bottom: 1px solid white;
+
+		margin-top: 6rem;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+}
+
+@media (min-width: 750px) {
+
+	body {
+		height: 2300px;
+	}
+
+	.grid_main {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 900px 900px 400px 100px;
+		grid-template-areas: 	'home'
+								'Sweatshirt'
+								'footer'
+								'gitHub';
+		width: 100%;
+		height: 100%;
+
+	}
+
+	.navGrid_Sweatshirt {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		width: 100%;
+		max-width: 600px;
+		height: 50px;
+
+		margin: 0 auto;
+
+	}
+}
+
+@media (min-width: 765px){
+
+	body {
+		height: 1850px;
+	}
+
+	.grid_main {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 450px 900px 400px 100px;
+		grid-template-areas: 	'home'
+								'Sweatshirt'
+								'footer'
+								'gitHub';
+		width: 100%;
+		height: 100%;
+
+	}
+
+	.home_grid {
+		
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		width: 100%;
+		max-width: 1024px;
+		height: 450px;
+		background-color: transparent;
+		z-index: 200;
+
+	}
+
+	.title {
+		grid-row: 1/2;
+		display: flex;
+		flex-direction: column;
+
+		justify-content: flex-end;
+	}
+
+	.title h2 {
+		
+		font-size: 2rem;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.box_paragraph {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		margin-bottom: 3rem;
+	}
+
+	.box_paragraph p:first-child {
+		font-size: 1rem;
+	}
+
+	.box_paragraph p:last-child{
+		
+		font-size: 1.50rem;
+
+		color: var(--first-color);
+	}
+
+	.colorRed {
+		
+		width: 48%;
+		height: 100%;
+
+		align-items: center;
+
+	}
+}
+
+@media (min-width: 810px) {
+
+	body {
+		height: 1650px;
+	}
+
+	.grid_main {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 450px 700px 400px 100px;
+		grid-template-areas: 	'home'
+								'Sweatshirt'
+								'footer'
+								'gitHub';
+		width: 100%;
+		height: 100%;
+
+	}
+	.grid_products {
+
+		
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+
+		width: 800px;
+
+	}
+
+}
+
+@media (min-width: 900px) {
+
+	.colorRed {
+		
+		width: 40%;
+		height: 100%;
+
+		align-items: center;
+
+	}
+
+	.home_grid {
+		
+		grid-template-columns: 1.3fr 1fr;
+		grid-template-rows: 1fr;
+		width: 100%;
+		max-width: 1024px;
+		height: 450px;
+		background-color: transparent;
+		z-index: 200;
+
+	}
+
+	.title h2 {
+		
+		font-size: 2.5rem;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media (min-width: 1000px) {
+
+	body {
+		height: 1650px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	header {
+		width: 100%;
+	    background: transparent;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+
+	    transition: .4s;
+	    z-index: 800;
+	}
+
+	.nav_menu {
+		position: fixed;
+		z-index: 900;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		margin: 0 auto;
+
+		display: flex;
+		justify-content: flex-start;
+	
+		width: 100%;
+		max-width: 600px;
+		height: 5rem;
+
+		transform: translateX(0);
+		transition: none;
+	}
+
+	.grid_main {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 650px 700px 400px 100px;
+		grid-template-areas: 	'home'
+								'Sweatshirt'
+								'footer'
+								'gitHub';
+		width: 100%;
+		max-width: 1024px;
+		height: 100%;
+
+	}
+
+	.colorRed {
+		
+		width: 50%;
+		height: 100%;
+
+		align-items: center;
+
+	}
+
+	.img_page {
+		width: 500px;
+		height: 500px;
+	}
+
+	.home_grid {
+		
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		width: 100%;
+		max-width: 1024px;
+		height: 700px;
+		background-color: transparent;
+		z-index: 200;
+
+	}
+
+	.title {
+		grid-row: 1/2;
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+	}
+
+	.title h2 {
+		
+		font-size: 3rem;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+	}
+
+
+}
+
+@media (min-width: 1100px) {
+	body {
+		height: 1650px;
+		display: flex;
+		justify-content: center;
+	}
+
+	html {
+		background-color: var(--body_color);
+		display: flex;
+		justify-content: center;
+		width: 1600px;
+		height: 2000px;
+
+		position: relative;
+	}
+
+	footer {
+		position: absolute;
+		bottom: 90px;
+		width: 100%;
+		height: 400px;
+		left: 0;
+
+		display: flex;
+	}
+
+	.gitHub {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 90px;
+		left: 0;
+	}
+	.footer_grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		gap: 2rem;
+		height: 70%;
+		width: 70%;
+
+		border-bottom: 1px solid white;
+
+		margin: 0 auto;
+
+		margin-top: 6rem;
+	}
+	.cart {
+		width: 25%;
+	}
+	.styleBag {
+		margin-top: 5rem;
+	}
+	.bill {
+		top: 33rem;
+	}
+}
+
+@media (min-width: 1500px){
+
+	.grid_main {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 650px 850px;
+		grid-template-areas: 	'home'
+								'Sweatshirt';
+		width: 100%;
+		max-width: 1024px;
+		height: 100%;
+
+	}
+	.bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 5rem;
+
+		padding: 0 15rem;
+		padding-left: 19rem;
+	}
+
+	.grid_products {
+
+		
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+
+		width: 800px;
+		height: 300px;
+
+		margin-top: 5rem;
+
+	}
+	.target {
+		width: 100%;
+		height: 100%;
+	}
+	.box_img {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.img_swtshirt {
+		width: 200px;
+		height: 200px;
+	}
+	.Precio {
+		height: 30%;
+	}
+	.btn_add_car {
+		width: 50px;
+		height: 50px;
+	}
+
+	.navGrid_Sweatshirt {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		width: 100%;
+		max-width: 800px;
+		height: 70px;
+
+		margin: 0 auto;
+
+	}
+
+	.item h3 {
+		font-size: 1.25rem;
+	}
+}
