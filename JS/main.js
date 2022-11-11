@@ -5,9 +5,14 @@ import {initCloseCart, printProductsCart, print} from './shopingCart.js'
 import {initBarShow} from './bar.js'
 
 
+
+
 window.addEventListener('load', function() {
 
-
+	const loader = document.querySelector('.loader')
+	setTimeout(() => {
+		loader.style = 'display: none;'
+	}, 3000)	
 	const objProducts = [
 		{name: 'Hoodies', id: 1, img: 'img/featured1.png', alt: 'featured1', precio: 14.00, stock: 10},
 		{name: 'Shirts', id: 2, img: 'img/featured2.png', alt: 'featured2', precio: 24.00, stock: 15},
