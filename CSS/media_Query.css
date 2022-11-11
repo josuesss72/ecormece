@@ -256,6 +256,8 @@
 		flex-direction: column;
 		justify-content: center;
 
+		margin-top: 6rem;
+
 	}
 
 	.box_empty {
@@ -290,6 +292,9 @@
 		margin-top: 6rem;
 		margin-left: 1.5rem;
 		margin-right: 1.5rem;
+	}
+	.box_check {
+		margin-top: 30px;
 	}
 }
 
