@@ -33,7 +33,8 @@ window.addEventListener('load', function() {
 	const bxX_ShoppingCart = document.getElementById('cart-close')
 	const icon_bag = document.getElementById('icon_car')
 	const cart = document.querySelector('.cart')
-	// const count2 = document.querySelector('.acount2')
+	const count2 = document.querySelector('.acount2')
+	const billtotal = document.querySelector('.totalPrecio')
 	
 	
 
@@ -68,26 +69,41 @@ window.addEventListener('load', function() {
 	}).filter('all')
 	// navegationProducts(navShirt, commodity, gridProducts, containerSweatshirt)
 
+	function  totalPrecio(productsBag){
+
+		let listProductsBag = Object.values(productsBag)
+
+		let suma = 0
+
+		listProductsBag.forEach( ({precio, amount}, i) => {
+			suma += precio * amount
+		});
+		return suma
+	}
 
 	gridProducts.addEventListener('click', (e) => {
-
 		
 		if(e.target.classList.contains('btn_add_car')){
+
+			let productID = e.target.id
 
 			count++
 
 			boxEmpty.style = 'display: none'
 			printProductsCart(objProducts, productsBag, e)
-
 			print(productsBag, bag)
-			cartCount.textContent = `${count}`
-			
 
+			billtotal.textContent = `$${totalPrecio(productsBag)}`
+			cartCount.textContent = `${count}`
+			count2.textContent = `${count} items`
+			
 		}
 		
 	})
 
 	bag.addEventListener('click', (e) => {
+
+
 
 		if(e.target.classList.contains('btn_subtract')){
 
@@ -104,6 +120,7 @@ window.addEventListener('load', function() {
 			
 
 			cartCount.textContent = `${count}`
+			count2.textContent = `${count} items`
 
 			if(Object.entries(productsBag).length === 0) {
 				boxEmpty.style = ''
@@ -120,6 +137,7 @@ window.addEventListener('load', function() {
 			}
 			
 			cartCount.textContent = `${count}`
+			count2.textContent = `${count} items`
 			
 		}
 		if(e.target.classList.contains('delete')){
@@ -128,6 +146,7 @@ window.addEventListener('load', function() {
 
 			count -= productsBag[productID].amount
 			cartCount.textContent = `${count}`
+			count2.textContent = `${count} items`
 			delete productsBag[productID]
 
 			if(Object.entries(productsBag).length === 0) {
@@ -135,7 +154,16 @@ window.addEventListener('load', function() {
 			}
 		}
 
+		billtotal.textContent = `$${totalPrecio(productsBag)}`
 		print(productsBag, bag)
+	})
+
+	const btnCheck = document.querySelector('.btn_check')
+
+	btnCheck.addEventListener('click', () => {
+		confirm('Are you sure you want to pay for these products?\n Spanish: ¿Seguro que quieres comprar estos articulos?')
+		? location.reload()
+		: false
 	})
 	
 
